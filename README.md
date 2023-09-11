@@ -1,6 +1,6 @@
 # Social Media Application
 
-![SoMe](https://user-images.githubusercontent.com/56642663/206691346-7e5979df-7693-42b6-9675-590a83a7c264.png)
+![Social media app]([https://user-images.githubusercontent.com/56642663/206691346-7e5979df-7693-42b6-9675-590a83a7c264.png](https://raw.githubusercontent.com/Bavy89/images/main/Images/loginPNG.PNG?_sm_au_=iVVPbHsJm0jKNZrsHC3TvKsWvfHVC))
 
 ## Description
 
