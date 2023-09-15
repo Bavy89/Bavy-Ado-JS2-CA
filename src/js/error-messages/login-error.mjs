@@ -10,27 +10,25 @@ import * as storage from "../storage/index.mjs";
  * ```
  */
 export function loginError(response) {
+  const loginCard = document.querySelector("#login-card");
+  
   if (!response.ok) {
     storage.clear();
-    const loginCard = document.querySelector("#login-card");
-    loginCard.innerHTML = "";
-    loginCard.innerHTML += `<h1 class="card-title mt-3">Login</h1>
-                                  <p class="card-text mb-1 mt-4 ">
-                                    There seems to be some issues with your login credentials. Please try again with different information
-                                  </p>
-                                  <a href="/index.html"
-                                    class="btn btn-primary mt-4 mb-3 px-8 shadow text-uppercase btn-login">
-                                    Try again
-                                  </a>
-                                  <p class="card-text mb-3">
-                                    If you haven't created an account, please do so
-                                  </p>
-                                  <a class="card text text-decoration-underline mb-3"
-                                    href="registration.html">
-                                      Create an account
-                                    </a>
-                                  `;
-  } else if (response.ok) {
+    loginCard.innerHTML = `
+      <h1 class="card-title mt-3">Login</h1>
+      <p class="card-text mb-1 mt-4 ">
+        There seems to be an issue with your credentials. Please re-enter and try again.
+      </p>
+      <a href="/index.html" class="btn btn-primary mt-4 mb-3 px-8 shadow text-uppercase btn-login">
+        Try again
+      </a>
+      <p class="card-text mb-3">
+        Haven't registered? Create an account below.
+      </p>
+      <a class="card text text-decoration-underline mb-3" href="registration.html">
+        Create an account
+      </a>`;
+  } else {
     window.location.replace("/profile.html");
   }
 }
