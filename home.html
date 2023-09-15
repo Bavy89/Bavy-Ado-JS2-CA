@@ -9,7 +9,7 @@
       content="home page, share and read other posts in the feed, search on people, posts and contacts on SoMe "
     />
     <link rel="stylesheet" href="dist/css/style.css" />
-    <title>Social Media App</title>
+    <title>feed</title>
   </head>
   <body class="bg-secondary d-flex flex-column min-vh-100">
     <header class="sticky-top">
@@ -122,65 +122,9 @@
               <h2 class="custom-label mt-3">Feed</h2>
               <div class="d-flex flex-row gap-3">
                 <div class="dropdown-left mb-3">
-                  <button
-                    class="btn btn-light shadow dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Filter tags
-                  </button>
                   <ul class="dropdown-menu tags"></ul>
                 </div>
-                <div class="dropdown-left mb-3">
-                  <button
-                    class="btn btn-light shadow dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Sort posts
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/post-sorted.html?sort=title&sortOrder=asc"
-                        >Sort Title A-Z</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/post-sorted.html?sort=title&sortOrder=desc"
-                        >Sort Title Z-A</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/post-sorted.html?sort=created&sortOrder=desc"
-                        >Newest Posts</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="/post-sorted.html?sort=created&sortOrder=asc"
-                        >Oldest Posts</a
-                      >
-                    </li>
-                  </ul>
-                </div>
               </div>
-
-              <div
-                class="spinner-border text-primary toggleLoadingIndicator"
-                role="status"
-              >
-                <span class="visually-hidden">Loading</span>
-              </div>
-              
             </div>
           </div>
         </div>
