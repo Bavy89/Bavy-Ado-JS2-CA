@@ -31,7 +31,8 @@ Hi, if you need to reach me, feel free to drop me a message on any of these plat
   
 ## Install
 
-- NPM I or NPM install
+- Clone repo
+- NPM install
 - NPM run 
 
   
