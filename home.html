@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <title>feed</title>
+  </head>
+  <body class="bg-secondary d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a href="/home.html" class="navbar-brand">
+<h1>social media app |</h1>            </a>
+            <button
+                type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="/home.html" class="nav-link active mx-2">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/profile.html" class="nav-link mx-2">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link mx-2">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 d-flex flex-column justify-content-center align-items-center text-left"
+            >
+              <p id="form-error" class="d-none card-text text-center mt-5"></p>
+              <form method="POST" id="send-post">
+                <div class="mb-3">
+                  <h1 class="form-label text-left custom-label mt-5">
+                    Share something
+                  </h1>
+                  <div>
+                    <div class="mb-3 mt-4">
+                      <label for="title" class="form-label">Title *</label>
+                      <textarea
+                        name="title"
+                        id="title"
+                        class="form-control post-input shadow"
+                        placeholder="Title"
+                        maxlength="280"
+                        required
+                      ></textarea>
+                    </div>
+                    <label for="post" class="form-label">Body</label>
+                    <textarea
+                      name="body"
+                      id="post"
+                      class="form-control post-input shadow mb-3"
+                      placeholder="What do you want to share?"
+                    ></textarea>
+                    <div class="mb-3">
+                      <label for="tags" class="form-label">Tags</label>
+                      <input
+                        name="tags"
+                        type="text"
+                        id="tags"
+                        class="form-control post-input shadow"
+                        placeholder="First tag, second tag, ..."
+                        pattern="^[a-zA-Z]+(,[a-zA-Z]+)*$"
+                        title="Tags need to be separated with comma ( , ) - Space is not allowed | Example: Tag1,Tag2,Tag3"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="media" class="form-label">Media</label>
+                      <input
+                        name="media"
+                        type="url"
+                        id="media"
+                        class="form-control post-input shadow"
+                        placeholder="Media must be a URL"
+                        title="media must be a fully formed URL that links to a live and publicly accessible image."
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary mt-4 mb-3 px-10 text-center btn-custom shadow"
+                    >
+                      Post
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="feed-container">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div
+              id="post-container"
+              class="col-12 lg-6 d-flex flex-column justify-content-center align-items-center text-left"
+            >
+              <h2 class="custom-label mt-3">Feed</h2>
+              <div class="d-flex flex-row gap-3">
+                <div class="dropdown-left mb-3">
+                  <ul class="dropdown-menu tags"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" type="module"></script>
+  </body>
+</html>
+
+
+<hr>
