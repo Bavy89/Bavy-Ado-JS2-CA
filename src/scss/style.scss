@@ -1,0 +1,40 @@
+@import "variables";
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.card.mb-5 {
+    max-width: $card-max-width;
+}
+.col-md-2.d-flex.mt-6.mb-4.profile-info {
+    width: $circle-diameter;
+    height: $circle-diameter;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .custom-label {
+    color: $custom-label-text-color;
+  }
+  
+  .form-label {
+    color: $label-text-color;
+  }
+
+  .form-control {
+    border-radius: 0 !important;
+    box-shadow: none !important;  // To override the `shadow` class from Bootstrap if needed
+}
+
+.card-img-top {
+  margin-bottom: 10px; // Adjust this as per your requirement to control space between image and h3
+}
+
+// Optional: If you wish to remove the default margin of h3
+.card-title {
+  margin-top: 0;
+}
+
+  
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
